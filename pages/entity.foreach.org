@@ -1,6 +1,4 @@
-#+TITLE: Entity.ForEach
-#+TAGS:
 
-** Test Change w
-** change?
-** change on pac mode
+#+TITLE: Entity.ForEach
+#+TAGS: entity.forEach
+** 
