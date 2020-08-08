@@ -8,6 +8,7 @@
 * Aug 6th, 2020
 * Aug 7th, 2020
 * Aug 8th, 2020
+** [[Manual iteration]]
 * Aug 9th, 2020
 * Aug 10th, 2020
 * Aug 11th, 2020
