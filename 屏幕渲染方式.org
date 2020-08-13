@@ -12,7 +12,7 @@
 **** 创建新的的缓存区
 **** 上下文切换
 *** 哪些情况会使⽤离屏渲染(off-Screen Render)?
-**** 1.drawRect
-**** 2.layer.shouldRasterize = YES;
-**** 3.有mask或者阴影（layer.makesToBunds）、shouldRasterize(光栅化)、masks(遮罩)、shadow(阴影)、edge antialiasing(抗锯齿)、group opacity(不透明)
-4.Text(UILabel,CATextLayer,CoreText)
+**** 1. drawRect
+**** 2. layer.shouldRasterize = YES;
+**** 3. 有mask或者阴影（layer.makesToBunds）、shouldRasterize(光栅化)、masks(遮罩)、shadow(阴影)、edge antialiasing(抗锯齿)、group opacity(不透明)
+4. Text(UILabel,CATextLayer,CoreText)
