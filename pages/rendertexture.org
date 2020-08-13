@@ -6,4 +6,9 @@
 *** 1.屏幕后处理,3d游戏最基本的后处理是抗锯齿,从Unity的FrameDebugger(可以看到所有FrameBuffer,不管它们属于哪个FBO)中可以看到抗锯齿的操作在OverlayUI之前,所以各位做2d游戏的可以选择把抗锯齿关掉,其他的后处理如bloom,HDR等都是操作屏幕这个默认的RenderTexture,配合上相关效果的Material
 *** 2.在Scene中直接将RT作为Texture传给其他材质球,操作是调用Material.SetTexture 为该RT,即可实现在另一个表面渲染另一个Camera的内容.可以制作后视镜功能
 *** 3.copy回cpu端的内存:基本操作是在当前帧渲染完毕后(协程中, yield return new WaitForEndOfFrame()),设置RenderTexture.active为目标RenderTexture(因为当前帧已渲染过,所以该RenderTexture不会被渲染).Texture.ReadPixels保存到显存.Texture.GetRawTextureData()读回cpu内存,可以保存到硬盘或者通过互联网通信(在unity中实现的截屏,录屏,实时共享屏幕).
-**
+** RenderTexture的注意事项
+*** 1.rendertexture的分配和销毁，如果你频繁的要new一个rt出来，那么不要直接new，而是使用RenderTexture提供的GetTemporary和ReleaseTemporary，它将在内部维护一个池，反复重用一些大小格式一样的rt资源，因为让gpu为你分配一个新的tex其实是要耗时间的
+*** 在将RT拷会cpu的过程中,帧数下降较多,在unity Profiler中发现Texture.ReadPixel()耗时很多,推测该方法效率很低,使用
+*** ```
+*** 123
+*** ```
