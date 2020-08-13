@@ -9,10 +9,10 @@
 ** 一般情况下，OpenGL ES会将应用提供到渲染服务的动画直接渲染显示(使⽤基本的渲染的流程) 但对于⼀些复杂的图像动画的渲染，并不能够直接渲染叠加显示出来。⽽是需要根据Command Buffer分通道进行渲染再组合。这个组合过程中，就有些渲染通道是不会直接显示出来的。标记此次渲染需要更多的渲染通道和合并步骤，⽽这些没有直接渲染显示在屏幕上的通道就是离屏渲染通道。
 ** 离屏渲染的体现
 *** 1、相⽐于当前屏幕渲染，离屏渲染的代价相对⽽言较高。主要有以下2个原因:
-*** 创建新的的缓存区
-*** 上下文切换
+**** 创建新的的缓存区
+**** 上下文切换
 *** 哪些情况会使⽤离屏渲染(off-Screen Render)?
-1.drawRect
-2.layer.shouldRasterize = YES;
-3.有mask或者阴影（layer.makesToBunds）、shouldRasterize(光栅化)、masks(遮罩)、shadow(阴影)、edge antialiasing(抗锯齿)、group opacity(不透明)
+**** 1.drawRect
+**** 2.layer.shouldRasterize = YES;
+**** 3.有mask或者阴影（layer.makesToBunds）、shouldRasterize(光栅化)、masks(遮罩)、shadow(阴影)、edge antialiasing(抗锯齿)、group opacity(不透明)
 4.Text(UILabel,CATextLayer,CoreText)
