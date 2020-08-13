@@ -1,6 +1,7 @@
 #+TITLE: 屏幕渲染方式
 #+TAGS:
 
+** https://www.jianshu.com/p/dbba97339e75?tdsourcetag=s_pctim_aiomsg
 ** 屏幕渲染方式分为两种
 ** On-Screen Rendering(当前屏幕渲染)
 *** 指的是GPU的渲染操作是在当前用于显示的屏幕缓存区中进行的
