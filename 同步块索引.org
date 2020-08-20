@@ -1,3 +1,5 @@
 #+TITLE: 同步块索引
 
+** 揭示同步块索引（上）：从lock开始
+** https://www.cnblogs.com/yuyijq/archive/2009/03/13/1410071.html
 ** 
