@@ -1,0 +1,8 @@
+#+TITLE: Entity Command Buffers
+
+** https://docs.unity3d.com/Packages/com.unity.entities@0.14/manual/entity_command_buffer.html
+** The EntityCommandBuffer (ECB) class solves two important problems:
+*** 1. When you're in a job, you can't access the EntityManager.
+*** 2. When you perform a structural change (like creating an entity), you create a sync point and must wait for all jobs to complete.
+** The EntityCommandBuffer abstraction allows you to queue up changes (from either a job or from the main thread) so that they can take effect later on the main thread.
+**
