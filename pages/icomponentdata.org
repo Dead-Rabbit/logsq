@@ -1,0 +1,3 @@
+#+TITLE: IComponentData
+** Managed IComponentData
+*** It is helpful to use a managed IComponentData (that is, IComponentData declared using a class rather than struct) to help port existing code over to ECS in a piecemeal fashion, interoperate with managed data not suitable in ISharedComponentData, or to prototype a data layout.
