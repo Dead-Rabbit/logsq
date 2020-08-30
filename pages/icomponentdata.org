@@ -1,4 +1,5 @@
 #+TITLE: IComponentData
+**
 ** Managed IComponentData
 *** It is helpful to use a managed IComponentData (that is, IComponentData declared using a class rather than struct) to help port existing code over to ECS in a piecemeal fashion, interoperate with managed data not suitable in ISharedComponentData, or to prototype a data layout.
 *** These components are used the same way as value type IComponentData. However, ECS handles them internally(内部) in a much different (and slower) way. If you don't need managed component support, define UNITY_DISABLE_MANAGED_COMPONENTS in your application's Player Settings (menu: Edit > Project Settings > Player > Scripting Define Symbols) to prevent accidental usage.
