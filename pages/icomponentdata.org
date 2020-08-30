@@ -2,3 +2,10 @@
 ** Managed IComponentData
 *** It is helpful to use a managed IComponentData (that is, IComponentData declared using a class rather than struct) to help port existing code over to ECS in a piecemeal fashion, interoperate with managed data not suitable in ISharedComponentData, or to prototype a data layout.
 *** These components are used the same way as value type IComponentData. However, ECS handles them internally(内部) in a much different (and slower) way. If you don't need managed component support, define UNITY_DISABLE_MANAGED_COMPONENTS in your application's Player Settings (menu: Edit > Project Settings > Player > Scripting Define Symbols) to prevent accidental usage.
+*** Because managed IComponentData is a managed type, it has the following performance drawbacks compared to value-type IComponentData:
+**** It cannot be used with the Burst Compiler
+**** It cannot be used in job structs
+**** It cannot use Chunk memory
+**** It requires garbage collection
+*** You should try to limit the number of managed components, and use blittable types as much as possible.
+*** Managed IComponentData must implement the IEquatable<T> interface and override for Object.GetHashCode(). Additionally, for serialization purposes, managed components must be default constructible.
