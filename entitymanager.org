@@ -1,3 +1,4 @@
 #+TITLE: EntityManager
 ** https://docs.unity3d.com/Packages/com.unity.entities@0.14/manual/ecs_entities.html
-**
+** 问：
+*** EntityManager 的 AddComponentData 和 [[Entity Command Buffers]] 的 SetComponent 有什么关系？
