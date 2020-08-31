@@ -9,4 +9,4 @@
 **** Adding components to an entity 给Entity添加组件
 **** Removing components from an entity 移除
 **** Changing the value of shared components 修改SharedComponents组件中的值
-***
+*** Broadly speaking【广义上讲】, any operation that changes the archetype of an entity or _causes the order_ of entities within a chunk to change is a structural change. These structural changes can only be performed on the main thread.
