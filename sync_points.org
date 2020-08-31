@@ -1,4 +1,4 @@
 #+TITLE: Sync points
 
 ** https://docs.unity3d.com/Packages/com.unity.entities@0.13/manual/sync_points.html
-** A synchronization point (sync point) is a point in program execution that waits for the completion of all jobs that have been scheduled so far. Sync points limit your ability to use all worker threads available in the job system for a period of time. As such, you should generally aim to avoid sync points.
+** A synchronization point (sync point) is a point in program execution that waits for the completion of all jobs that have been scheduled so far. Sync points limit your ability to use all worker threads available in the job system for a period of time. As such, you should generally aim to avoid sync points.  同步点（sync point）是程序执行中的一个点，它等待到目前为止已经排定的所有作业的完成。同步点限制了您在一段时间内使用作业系统中所有可用工作线程的能力。因此，您通常应该以避免同步点为目标。
