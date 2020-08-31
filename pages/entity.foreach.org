@@ -2,4 +2,4 @@
 #+TITLE: Entity.ForEach
 #+TAGS: entity.forEach
 ** Schedule 和 ScheduleParallel 的区别？
-***
+** 参数中，ref意为passby reference，带进来的变量会直接更新到本体，RenderMesh本身就是class所以不需要ref。注意目前似乎带参数时必须把class放在struct之前，否则会报错 https://www.bilibili.com/read/cv6312903
