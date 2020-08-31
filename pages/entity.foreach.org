@@ -1,4 +1,5 @@
 
 #+TITLE: Entity.ForEach
 #+TAGS: entity.forEach
-** 
+** Schedule 和 ScheduleParallel 的区别？
+***
