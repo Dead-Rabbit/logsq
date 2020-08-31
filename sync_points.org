@@ -3,10 +3,10 @@
 ** https://docs.unity3d.com/Packages/com.unity.entities@0.14/manual/sync_points.html
 ** A synchronization point (sync point) is a point in program execution that waits for the completion of all jobs that have been scheduled so far. Sync points limit your ability to use all worker threads available in the job system for a period of time. As such, you should generally aim to avoid sync points.  【同步点（sync point）是程序执行中的一个点，它等待到目前为止 that have been scheduled 的所有作业的完成。同步点限制了您在一段时间内使用作业系统中所有可用工作线程的能力。因此，您通常应该以避免同步点为目标。】
 ** Structural changes
-*** Sync points are caused by operations that you cannot safely perform when there are any other jobs that operate on components. Structural changes to the data in ECS are the primary cause of sync points.【同步点是由于当有任何其他作业对组件进行操作时，你不能安全地执行的操作引起的。ECS中数据的结构变化是造成同步点的主要原因0】 All of the following are structural changes:
-**** Creating entities
-**** Deleting entities
-**** Adding components to an entity
-**** Removing components from an entity
-**** Changing the value of shared components
+*** Sync points are caused by operations that you cannot safely perform when there are any other jobs that operate on components. Structural changes to the data in ECS are the primary cause of sync points.【同步点是由于当有任何其他作业对组件进行操作时，你不能安全地执行的操作引起的。ECS中数据的结构变化是造成同步点的主要原因】 All of the following are structural changes:
+**** Creating entities 创建Entities
+**** Deleting entities 删除
+**** Adding components to an entity 给Entity添加组件
+**** Removing components from an entity 移除
+**** Changing the value of shared components 修改SharedComponents组件中的值
 ***
