@@ -1,4 +1,6 @@
 #+TITLE: BlobAssetStore
 
 ** https://docs.unity3d.com/Packages/com.unity.entities@0.14/api/Unity.Entities.BlobAssetStore.html
+** https://www.youtube.com/watch?v=7_rZhp6V8ds 【youtube 学习视频】
 ** Right now the lifetime scope of this cache is bound to the LiveLinkDiffGenerator's one and it is scoped by SubScene. In other words the cache is created when we enter edit mode for a given SubScene and it is released when we close edit mode. And instance of this cache is exposed in GameObjectConversionSettings to allow users to query and avoid rebuilding assets. During conversion process the user must rely on the BlobAssetComputationContext<TS, TB> to associate the BlobAsset with their corresponding Authoring UnityObject and to determine which ones are to compute. Thread-safety: nothing is thread-safe, we assume this class is consumed through the main-thread only. Calling Dispose on an instance will reset the content and dispose all BlobAssetReference object stored.
+**
