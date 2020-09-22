@@ -1,0 +1,4 @@
+#+TITLE: Job System
+
+** 安全性系统
+** C# Job System拷贝数据的方式表明了一个Job只能访问可以位块传输的数据类型(blitable data types)。这种数据类型在托管代码和原生代码之间进行传递的时候不需要类型转换
