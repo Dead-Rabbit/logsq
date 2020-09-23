@@ -2,3 +2,9 @@
 
 ** 安全性系统
 ** C# Job System拷贝数据的方式表明了一个Job只能访问可以位块传输的数据类型(blitable data types)。这种数据类型在托管代码和原生代码之间进行传递的时候不需要类型转换
+** NativeContainer分配器(Allocator)
+*** 当创建一个NativeContainer时，你必须指定你需要的内存分配类型。分配的类型由jobs运行的时间来决定。这种情况下你可以在每一种情况下使分配器达到可能的最好性能。
+*** 这里对于NativeContainer的内存分配有三个分配器类型。当你初始化你的NativeContainer时你需要指定一个合适的分配器。
+*** Allocator.Temp是最快的分配类型。它适用于分配一个生命周期只有一帧或更短时间的操作。你不应当把一个分配器为Temp类型分配的NativeContainer传递给jobs使用。你同时需要在函数返回之前调用Dispose方法(例如MonoBehaviour.Update，或者其他从原生到托管代码的调用)
+*** Allocator.TempJob是相比于Temp是一个较慢的分配类型但它比Persistent要快。这是一个生命周期为四帧的内存分配而且它是线程安全的。如果你在四帧之内没有调用Dispose，控制台会打印一个由原生代码生成的警告信息。绝大部分小jobs使用这种类型的NativeContainer分配器。
+*** Allocator.Persistent是最慢的分配类型但，它可以持续存在到你需要的时间，如果必要的话可以贯穿应用程序的整个生命周期。它是直接调用malloc的一个封装。长时间的jos可以使用这种分配类型。当性能比较紧张的时候你不应当使用Persistent。
